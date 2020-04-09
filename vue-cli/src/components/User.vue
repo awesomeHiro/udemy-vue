@@ -11,6 +11,7 @@
           :name="name"
           :age="age"
           @nameChanged="name = $event"
+          :resetName="resetName"
          ></app-user-detail>
         <!-- <app-user-detail></app-user-detail> -->
       </div>
