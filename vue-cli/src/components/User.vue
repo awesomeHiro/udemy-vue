@@ -3,20 +3,21 @@
     <h1>The User Component</h1>
     <p>I'm {{ name }}!</p>
     <p>{{ age }} years old!</p>
-    <button @click="reverseName">reverseName</button>
     <hr />
     <div class="row">
       <div class="col-xs-12 col-sm-6">
         <app-user-detail
           :name="name"
           :age="age"
-          @nameChanged="name = $event"
-          :resetName="resetName"
          ></app-user-detail>
         <!-- <app-user-detail></app-user-detail> -->
       </div>
       <div class="col-xs-12 col-sm-6">
-        <app-user-edit :name="name" :age="age" @ageChanged="age = $event"></app-user-edit>
+        <app-user-edit
+          :resetName="resetName"
+          :reverseName="reverseName"
+          :editAge="editAge"
+          ></app-user-edit>
       </div>
     </div>
   </div>
@@ -39,6 +40,9 @@ export default {
     },
     resetName() {
       this.name = 'Max'
+    },
+    editAge(){
+      this.age = 30
     }
   },
   components: {

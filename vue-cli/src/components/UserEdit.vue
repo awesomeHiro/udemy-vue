@@ -1,8 +1,9 @@
 <template>
   <div class="component">
     <h3>Edit</h3>
-    <p>name: {{ name }}</p>
-    <p>age: {{ age }}</p>
+    <button @click="reverseName">reverseName</button>
+    <button @click="resetName">resetName</button>\
+    <hr>
     <button @click="editAge">EditAge</button>
   </div>
 </template>
@@ -10,14 +11,11 @@
 <script>
   export default{
     props:{
-      name:{},
-      age:{}
+      reverseName: Function,
+      resetName: Function,
+      editAge: Function
     },
     methods:{
-      editAge(){
-        this.age = 30
-        this.$emit('ageChanged', this.age)
-      }
     }
   }
 </script>
