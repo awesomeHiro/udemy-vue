@@ -1,18 +1,16 @@
 <template>
-  <v-footer padless>
-    <v-col
-      class="text-center"
-      cols="12"
-    >
-      <strong>info: click on a Quote to delete it</strong>
+    <v-col class="text-center" cols="12">
+      <v-banner single-line>
+        <v-icon color="warning" size="36">
+          mdi-information
+        </v-icon>
+        click on a Quote to delete it
+      </v-banner>
     </v-col>
-  </v-footer>
 </template>
 
 <script>
-    export default {
-    }
+export default {};
 </script>
 
-<style>
-</style>
+<style></style>
