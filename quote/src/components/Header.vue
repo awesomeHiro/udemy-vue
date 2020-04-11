@@ -1,7 +1,7 @@
 <template>
   <div>
-  <v-progress-linear :value="quotesSize * 10" height="25">
-      <strong> {{ quotesSize }}/10</strong>
+  <v-progress-linear :value="getQuotes().length * 10" height="25">
+      <strong> {{ getQuotes().length }}/10</strong>
     </v-progress-linear>
   </div>
 </template>
@@ -11,11 +11,6 @@ export default {
   props: {
     getQuotes: Function
   },
-  computed: {
-    quotesSize: function() {
-      return this.getQuotes().length;
-    }
-  }
 };
 </script>
 

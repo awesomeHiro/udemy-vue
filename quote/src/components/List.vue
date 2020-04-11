@@ -2,7 +2,7 @@
   <div class="container">
     <h1>list</h1>
     <ul id="example-1">
-      <li v-for="quote in quotes" :key="quote">
+      <li v-for="quote in getQuotes()" :key="quote">
         {{ quote }}
       </li>
     </ul>
@@ -14,11 +14,6 @@ export default {
   props: {
     getQuotes: Function
   },
-  computed:{
-      quotes: function () {
-          return this.getQuotes()
-      }
-  }
 };
 </script>
 
