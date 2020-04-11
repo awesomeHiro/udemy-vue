@@ -44,10 +44,7 @@ export default {
       "Quote4",
       "Quote5",
       "Quote6",
-      "Quote7",
-      "Quote8",
-      "Quote9",
-      "Quote10"
+      "Quote7"
     ]
   }),
   methods:{
