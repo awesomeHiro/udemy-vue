@@ -8,7 +8,7 @@
 
     <v-content>
       <v-container fluid fill-wide>
-        <Header />
+        <Header :getQuotes="getQuotes" />
         <v-divider></v-divider>
         <Add :addQuote="addQuote"/>
         <v-divider></v-divider>

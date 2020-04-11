@@ -3,6 +3,7 @@
     <v-form ref="form">
       <v-text-field
         v-model="newQuote"
+        placeholder="edit me"
         required
       ></v-text-field>
       <v-btn color="success" @click="add()">

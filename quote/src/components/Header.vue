@@ -1,14 +1,22 @@
 <template>
-    <div class="container">
-        <h1>header</h1>
-    </div>
+  <div>
+  <v-progress-linear :value="quotesSize * 10" height="25">
+      <strong> {{ quotesSize }}/10</strong>
+    </v-progress-linear>
+  </div>
 </template>
 
 <script>
-    export default {
-        
+export default {
+  props: {
+    getQuotes: Function
+  },
+  computed: {
+    quotesSize: function() {
+      return this.getQuotes().length;
     }
+  }
+};
 </script>
 
-<style>
-</style>
+<style></style>
