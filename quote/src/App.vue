@@ -12,7 +12,7 @@
         <v-divider></v-divider>
         <Add />
         <v-divider></v-divider>
-        <List />
+        <List :getQuotes="getQuotes" />
         <v-divider></v-divider>
         <Footer />
       </v-container>
@@ -37,7 +37,26 @@ export default {
   },
 
   data: () => ({
-    //
-  })
+    quotes: [
+      "Quote1",
+      "Quote2",
+      "Quote3",
+      "Quote4",
+      "Quote5",
+      "Quote6",
+      "Quote7",
+      "Quote8",
+      "Quote9",
+      "Quote10"
+    ]
+  }),
+  methods:{
+    getQuotes(){
+      return this.quotes
+    },
+    // addQuote(){
+      
+    // }
+  }
 };
 </script>
