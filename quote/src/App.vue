@@ -10,7 +10,7 @@
       <v-container fluid fill-wide>
         <Header />
         <v-divider></v-divider>
-        <Add />
+        <Add :addQuote="addQuote"/>
         <v-divider></v-divider>
         <List :getQuotes="getQuotes" />
         <v-divider></v-divider>
@@ -54,9 +54,9 @@ export default {
     getQuotes(){
       return this.quotes
     },
-    // addQuote(){
-      
-    // }
+    addQuote(newQuote){
+      this.quotes.push(newQuote)
+    }
   }
 };
 </script>
