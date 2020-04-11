@@ -5,8 +5,10 @@
         v-model="newQuote"
         placeholder="edit me"
         required
+        v-on:keydown.enter.prevent='add'
+        :disabled="quotesSize >= 10"
       ></v-text-field>
-      <v-btn color="success" @click="add()">
+      <v-btn :disabled="quotesSize >= 10 || !this.newQuote" color="success" @click="add()">
         Add Quote
       </v-btn>
     </v-form>
@@ -16,14 +18,23 @@
 <script>
 export default {
   props: {
-    addQuote: Function
+    addQuote: Function,
+    getQuotes: Function
   },
 
   data: () => ({
     newQuote: '',
   }),
+    computed:{
+      quotesSize: function () {
+          return this.getQuotes().length
+      }
+  },
+
     methods: {
         add(){
+            if (this.quotesSize >= 10) return
+            if (!this.newQuote) return
             this.addQuote(this.newQuote)
             this.$refs.form.reset()
         }

@@ -10,7 +10,7 @@
       <v-container fluid fill-wide>
         <Header :getQuotes="getQuotes" />
         <v-divider></v-divider>
-        <Add :addQuote="addQuote"/>
+        <Add :getQuotes="getQuotes" :addQuote="addQuote" />
         <v-divider></v-divider>
         <List :getQuotes="getQuotes" />
         <v-divider></v-divider>
