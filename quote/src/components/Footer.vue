@@ -1,7 +1,12 @@
 <template>
-    <div class="container">
-        <p>info: click on a Quote to delete it</p>
-    </div>
+  <v-footer padless>
+    <v-col
+      class="text-center"
+      cols="12"
+    >
+      <strong>info: click on a Quote to delete it</strong>
+    </v-col>
+  </v-footer>
 </template>
 
 <script>
