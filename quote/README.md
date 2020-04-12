@@ -1,3 +1,5 @@
+![capture](./public/Capture-min.PNG "capture")
+
 # quote
 
 ## Project setup
